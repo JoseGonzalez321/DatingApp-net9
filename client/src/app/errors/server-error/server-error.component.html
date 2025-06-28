@@ -1,0 +1,18 @@
+<h4>Inter Server Error</h4>
+
+@if (error)
+{
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+    <p class="font-weight-bold">Note: If you see this error, it's not a client side error. It's a backend!</p>
+    <p>What to do next?</p>
+    <ol>
+        <li>open chrome dev tools, check the failing network requests in the network tab</li>
+        <li>Examine the URL of the failing request</li>
+        <li>Reproduce the error in post man. If you can reproduce, then it's a backend issue</li>
+    </ol>
+
+    <p class="font-weight-bold">Check the stack trace. The first 2 lines tell you exactly which line of code is causing this issue</p>
+    <code class="mt-5" style="background-color: whitesmoke;">
+        {{error.details}}
+    </code>
+}
